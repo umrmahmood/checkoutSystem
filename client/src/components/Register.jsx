@@ -62,7 +62,7 @@ const Register = () => {
 	const transmitToCentralServer = async (register) => {
 		const { registerId, purchases } = register;
 		try {
-			const response = await axios.post("http://localhost:3002/transactions", {
+			const response = await axios.post("/api/transactions", {
 				registerId,
 				purchases,
 			});

@@ -43,9 +43,9 @@ Ensure that MongoDB is running on your machine. You can start it using:
 mongod --dbpath /path/to/your/db
 - Environment Variables
 Create a .env file in the root directory and add the following:
-env
-MONGO_URI=mongodb://localhost:27017/central_server
-PORT=3000
+env varables:
+MONGO_URI=
+PORT=
 ### Start the Server
 - npm start
 ### Run the React Frontend

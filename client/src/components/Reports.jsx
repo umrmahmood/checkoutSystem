@@ -12,7 +12,7 @@ const Report = () => {
 		setLoading(true);
 		setError(null);
 		try {
-			const response = await axios.get("http://localhost:3002/report");
+			const response = await axios.get("/api/report");
 			setReport(response.data);
 			setTransactionsVisible(true);
 		} catch (err) {
@@ -26,7 +26,7 @@ const Report = () => {
 		setLoading(true);
 		setError(null);
 		try {
-			const response = await axios.get("http://localhost:3002/report");
+			const response = await axios.get("/api/report");
 			// setReport(response.data);
 			const fetchedReport = response.data;
 
