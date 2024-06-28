@@ -1,7 +1,7 @@
-const express = require("express");
-const { Transaction } = require("./models");
-const router = express.Router();
+import express from "express";
+import Transaction from "./models.js";
 
+const router = express.Router();
 // Receive purchase data from registers
 router.post("/transactions", async (req, res) => {
 	const { registerId, purchases } = req.body;
@@ -74,4 +74,5 @@ router.get("/report/:id", async (req, res) => {
 		res.status(500).json({ message: "Error generating report" });
 	}
 });
-module.exports = router;
+
+export default router;

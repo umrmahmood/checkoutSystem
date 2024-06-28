@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const transactionItemSchema = new Schema({
@@ -28,7 +28,7 @@ const transactionSchema = new Schema(
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
-module.exports = { Transaction };
+export default Transaction;
 
 
 // Schema based on the ERD model

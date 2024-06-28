@@ -1,12 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const cors=require('cors');
-const transactionRoutes = require('./transactions');
+import express from "express";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import cors from "cors";
+import transactionRoutes from './transactions.js';
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 const PORT = 3002;
-const MONGO_URI = 'mongodb+srv://umermahmood:Y50SdyREdPed7Luz@shopcounter.cqyfapj.mongodb.net/?retryWrites=true&w=majority&appName=shopCounter'
+const MONGO_URI = process.env.MONGO_URI;
 
 // Middleware
 app.use(cors());
